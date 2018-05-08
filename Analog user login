@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Analog user login</title>
+    <script>
+        function r()
+        {
+            var username=document.getElementById("username");
+            var pass=document.getElementById("password");
+            if(username.value=="")
+            {
+                alert("please input user name");
+                username.focus();
+                return ;
+            }
+            else  if(pass.value=="")
+            {
+                alert("please input user name");
+                return;
+            }
+            else  if((pass.value=="123")&&(username.value=="123"))
+            {
+                //frm.submit();
+                alert("login  success !");
+                return;
+            }
+            else
+            {
+                alert("login fail，please check your input！");
+                return;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+<form name="frm" action="0.html" method="post">
+    <table  >
+        <tr align=center>
+            <td>user name:</td><td><input type="text" name="username"  id="username"></td>
+        </tr>
+        <tr align=center><td>password:</td><td><input type="password" name="password" id="password"></td></tr>
+        <tr align=center><td colspan="3"><input type="button" value="login" onclick="r();"/>
+            </td></tr>
+    </table>
+</form>
+</body>
+</html>
